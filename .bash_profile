@@ -231,6 +231,8 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   ---------------------------------------
 
 alias mountReadWrite='/sbin/mount -uw /'    # mountReadWrite:   For use when booted into single-user
+alias update='sudo softwareupdate -i -a'    # update:   Use update command to update Mac OS X software via softwareupdate
+
 
 #   cleanupDS:  Recursively delete .DS_Store files
 #   -------------------------------------------------------------------
