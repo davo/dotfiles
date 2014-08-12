@@ -263,6 +263,16 @@ alias herr='tail /var/log/httpd/error_log'              # herr:             Tail
 alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:   Shows apache error logs
 httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
 
+# open a file in chrome
+# usage: $ chrome index.html
+function chrome() {
+  open $@ --args --allow-file-access-from-files
+}
+
+# start a server in your current folder
+# usage: $ server
+alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
+
 #   httpDebug:  Download a web page and show info on what took time
 #   -------------------------------------------------------------------
     httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
