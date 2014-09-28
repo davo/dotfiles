@@ -202,7 +202,7 @@ ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name end
 
 alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
-alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
+alias flushDNS='dscacheutil -flushcache;sudo killall -HUP mDNSResponder'            # flushDNS:     Flush out the DNS Cache
 alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
 alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
 alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
